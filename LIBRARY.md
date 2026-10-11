@@ -37,6 +37,18 @@ Every third-party package used by this project, why it is here, and its security
 | `@types/node` | ^24.19.2 | Node.js type definitions | 2026-10-11 | Matches installed Node 24 |
 | `@types/react`, `@types/react-dom` | ^19 | React type definitions | 2026-10-11 | Match React 19 |
 
+## CI / deployment actions (`.github/workflows/deploy.yml`)
+
+Not npm packages, but third-party code that runs in our pipeline. All are official GitHub actions, pinned to a major version.
+
+| Action | Version | Purpose | Added |
+|---|---|---|---|
+| `actions/checkout` | v4 | Downloads the repository code | 2026-10-11 |
+| `actions/setup-node` | v4 | Installs Node.js 24 and caches npm downloads | 2026-10-11 |
+| `actions/configure-pages` | v5 | Prepares the GitHub Pages environment | 2026-10-11 |
+| `actions/upload-pages-artifact` | v3 | Packages the `out/` folder | 2026-10-11 |
+| `actions/deploy-pages` | v4 | Publishes the package to GitHub Pages | 2026-10-11 |
+
 ## Security audit log
 
 | Date | Command | Result | Decision |
