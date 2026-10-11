@@ -9,8 +9,8 @@ interface BadgeProps extends ComponentPropsWithoutRef<"span"> {
 }
 
 const toneClasses: Record<BadgeTone, string> = {
-  neutral: "bg-slate-100 text-muted",
-  brand: "bg-brand-soft text-brand-dark",
+  neutral: "bg-chip text-muted",
+  brand: "bg-brand-soft text-brand-ink",
 };
 
 /** Small pill used for project tags and status labels. */

@@ -9,22 +9,51 @@
   /* Brand */
   /* Crimson red from the logo; navy and white complete the brand palette. */
   --color-brand: #bc0f29;
-  --color-brand-dark: #9a0c21;
-  --color-brand-soft: #fdecef;
+  --color-brand-dark: #9a0c21; /* hover background of brand buttons */
+  --color-brand-soft: #fdecef; /* light tint behind icons, badges, active menu item */
+  --color-brand-ink: #9a0c21; /* text drawn on top of brand-soft */
 
   /* Neutrals */
   --color-ink: #1a1a1a;
-  --color-navy: #0e1d67;
+  --color-navy: #0e1d67; /* headings (becomes light in dark mode) */
   --color-surface: #f8fafc;
   --color-card: #ffffff;
   --color-line: #e2e8f0;
   --color-muted: #475569;
+  --color-chip: #f1f5f9; /* neutral badge background */
+  --color-footer: #0e1d67; /* footer background (stays dark in both themes) */
+  --color-success: #15803d;
 
   /* Fonts (CSS variables are provided by next/font in layout.tsx) */
   --font-sans: var(--font-geist-sans), system-ui, sans-serif;
 
   /* Shape */
   --radius-card: 1rem;
+}
+
+/*
+ * Dark theme: the same token names with different values. It is switched on by
+ * <html data-theme="dark">, which the header toggle (and an inline script in
+ * layout.tsx that restores the saved choice) sets. Components need no changes.
+ */
+:root[data-theme="dark"] {
+  --color-brand: #e8334d;
+  --color-brand-dark: #c9253d;
+  --color-brand-soft: #3a1420;
+  --color-brand-ink: #ff8a9a;
+
+  --color-ink: #e5e7eb;
+  --color-navy: #e8ecff;
+  --color-surface: #0b1020;
+  --color-card: #131a30;
+  --color-line: #263052;
+  --color-muted: #a3aec7;
+  --color-chip: #1c2542;
+  --color-footer: #060914;
+  --color-success: #4ade80;
+
+  /* Dark form controls, scrollbars and other browser-drawn parts. */
+  color-scheme: dark;
 }
 
 @layer base {

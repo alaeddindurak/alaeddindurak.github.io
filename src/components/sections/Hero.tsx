@@ -27,7 +27,7 @@ export function Hero() {
             Portrait frame with a fixed 3:4 aspect ratio, so any photo is cropped to the same shape.
             "object-top" keeps the face in view when the photo is cropped.
           */}
-          <div className="relative aspect-3/4 w-44 overflow-hidden rounded-3xl shadow-lg ring-4 ring-white sm:w-52">
+          <div className="ring-card relative aspect-3/4 w-44 overflow-hidden rounded-3xl shadow-lg ring-4 sm:w-52">
             <Image
               src={siteConfig.photo}
               alt={`${siteConfig.name} profil fotoğrafı`}

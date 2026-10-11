@@ -4,6 +4,7 @@ import "./globals.css";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { siteConfig } from "@/data/site";
+import { themeInitScript } from "@/lib/theme";
 
 // Loads the Geist font at build time and exposes it as a CSS variable used by the theme.
 const geistSans = Geist({
@@ -23,7 +24,11 @@ export const metadata: Metadata = {
 /** Root layout: wraps every page with the shared header and footer. */
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="tr" className={`${geistSans.variable} h-full antialiased`}>
+    // suppressHydrationWarning: the init script below sets data-theme before React loads.
+    <html lang="tr" className={`${geistSans.variable} h-full antialiased`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className="flex min-h-full flex-col">
         <Header />
         <main className="flex-1">{children}</main>

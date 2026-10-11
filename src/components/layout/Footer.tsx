@@ -5,7 +5,7 @@ import { siteConfig } from "@/data/site";
 /** Page footer with the copyright line and quick social links. */
 export function Footer() {
   return (
-    <footer className="border-line bg-navy mt-auto border-t text-slate-300">
+    <footer className="border-line bg-footer mt-auto border-t text-slate-300">
       <Container className="flex flex-col items-center justify-between gap-4 py-8 sm:flex-row">
         <p className="text-sm">
           © {siteConfig.copyrightYear} {siteConfig.name}. Tüm hakları saklıdır.

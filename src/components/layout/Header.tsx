@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { ThemeToggle } from "@/components/layout/ThemeToggle";
 import { Container } from "@/components/ui/Container";
 import { navigation } from "@/data/navigation";
 import { siteConfig } from "@/data/site";
@@ -27,7 +28,7 @@ export function Header() {
   const linkClasses = (href: string) =>
     cn(
       "rounded-full px-4 py-2 text-sm font-medium transition-colors",
-      pathname === href ? "bg-brand-soft text-brand-dark" : "text-muted hover:text-brand",
+      pathname === href ? "bg-brand-soft text-brand-ink" : "text-muted hover:text-brand",
     );
 
   return (
@@ -37,31 +38,40 @@ export function Header() {
           {siteConfig.name}
         </Link>
 
-        {/* Desktop navigation */}
-        <nav aria-label="Ana menü" className="hidden items-center gap-1 md:flex">
-          {navigation.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={linkClasses(item.href)}
-              aria-current={pathname === item.href ? "page" : undefined}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+        <div className="flex items-center gap-2">
+          {/* Desktop navigation */}
+          <nav aria-label="Ana menü" className="hidden items-center gap-1 md:flex">
+            {navigation.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={linkClasses(item.href)}
+                aria-current={pathname === item.href ? "page" : undefined}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
 
-        {/* Hamburger button, visible only on small screens */}
-        <button
-          type="button"
-          className="text-navy rounded-lg p-2 md:hidden"
-          aria-label={isMenuOpen ? "Menüyü kapat" : "Menüyü aç"}
-          aria-expanded={isMenuOpen}
-          aria-controls="mobile-menu"
-          onClick={() => setIsMenuOpen((open) => !open)}
-        >
-          {isMenuOpen ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
-        </button>
+          {/* Light / dark theme switch, visible on every screen size */}
+          <ThemeToggle />
+
+          {/* Hamburger button, visible only on small screens */}
+          <button
+            type="button"
+            className="text-navy rounded-lg p-2 md:hidden"
+            aria-label={isMenuOpen ? "Menüyü kapat" : "Menüyü aç"}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
+            onClick={() => setIsMenuOpen((open) => !open)}
+          >
+            {isMenuOpen ? (
+              <X className="h-6 w-6" aria-hidden="true" />
+            ) : (
+              <Menu className="h-6 w-6" aria-hidden="true" />
+            )}
+          </button>
+        </div>
       </Container>
 
       {/* Mobile menu panel */}

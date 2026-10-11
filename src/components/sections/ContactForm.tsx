@@ -129,12 +129,12 @@ export function ContactForm({ accessKey }: ContactFormProps) {
         {/* Status messages are announced to screen readers. */}
         <div role="status" aria-live="polite">
           {state === "success" ? (
-            <p className="text-sm font-medium text-green-700">
+            <p className="text-success text-sm font-medium">
               Mesajınız iletildi, teşekkürler. En kısa sürede dönüş yapacağım.
             </p>
           ) : null}
           {state === "error" ? (
-            <p className="text-brand-dark text-sm font-medium">
+            <p className="text-brand-ink text-sm font-medium">
               Mesaj gönderilemedi. Lütfen daha sonra tekrar deneyin ya da yukarıdaki telefon veya e-posta ile ulaşın.
             </p>
           ) : null}
