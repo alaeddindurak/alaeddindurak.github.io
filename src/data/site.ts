@@ -11,6 +11,9 @@ export const siteConfig: SiteConfig = {
   // Job title shown under the name in the hero section.
   headline: "E-Dönüşüm Satış Uzmanı",
 
+  // Keywords shown as badges under the headline.
+  tags: ["Saha Satış", "E-Dönüşüm", "İş Geliştirme"],
+
   description: "Alaeddin Durak'ın kişisel portfolyo sitesi: projeler, sosyal medya ve iletişim.",
 
   // Profile photo (file lives in /public). Portrait 3:4 photos fit the frame best.

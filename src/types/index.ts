@@ -45,11 +45,56 @@ export interface Project {
   status?: ProjectStatus;
 }
 
+/** Icons available for skill cards (mapped to lucide icons in `Skills.tsx`). */
+export type SkillIcon = "search" | "users" | "file-text" | "trending-up";
+
+/** One skill / area of expertise card on the home page. */
+export interface Skill {
+  id: string;
+  title: string;
+  description: string;
+  icon: SkillIcon;
+}
+
+/** One position in the experience timeline. */
+export interface ExperienceItem {
+  id: string;
+  company: string;
+  role: string;
+  /** Human-readable period, e.g. "Eylül 2026 – Günümüz". */
+  period: string;
+  /** Marks the current position (shows a "Güncel" badge). */
+  isCurrent?: boolean;
+  /** Optional one-sentence summary of the role. */
+  description?: string;
+  /** Optional bullet list of responsibilities or achievements. */
+  highlights?: string[];
+}
+
+/** One school or training programme. */
+export interface EducationItem {
+  id: string;
+  institution: string;
+  title: string;
+  period: string;
+  /** Optional extra line, e.g. the content of a short programme. */
+  note?: string;
+}
+
+/** A named group of competencies shown as badges (skills, tools, languages). */
+export interface CompetencyGroup {
+  id: string;
+  title: string;
+  items: string[];
+}
+
 /** Global site configuration. */
 export interface SiteConfig {
   name: string;
   /** Job title / one-line introduction shown in the hero. */
   headline: string;
+  /** Short keywords shown as badges under the headline. */
+  tags: string[];
   /** Page <title> default and meta description. */
   description: string;
   /** Path of the profile photo inside `public/`, e.g. "/profile.png". */

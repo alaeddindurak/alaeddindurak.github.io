@@ -1,39 +1,40 @@
 import type { Project } from "@/types";
 
 /**
- * Work areas shown on the "Çalışmalarım" page (route: /projects).
- * Compiled from the experience items in the owner's CV.
+ * Work shown on the "Çalışmalarım" page (route: /projects). Source: the owner's CV.
  * Add a `status` ("planned" | "in-progress" | "completed") to show a status badge on a card.
  */
 export const projects: Project[] = [
   {
-    id: "field-analysis",
-    title: "Saha Analizi ve Proje Geliştirme",
-    description: "Sahayı analiz ederek fırsatları belirliyor, bu doğrultuda satışa yönelik projeler geliştiriyorum.",
-    tags: ["Saha", "Analiz"],
+    id: "partner-channels",
+    title: "İş Ortağı Kanalı Kurgulama",
+    description: "Yeni iş ortağı kanalları kurgulayarak sürdürülebilir ve ölçeklenebilir satış döngüleri oluşturdum.",
+    tags: ["Satış", "Kanal Geliştirme"],
   },
   {
-    id: "customer-needs",
-    title: "Müşteri İhtiyaç Analizi",
-    description: "Müşterilerin istek ve ihtiyaçlarını analiz ederek onlara en uygun çözümü sunuyorum.",
-    tags: ["Müşteri", "Analiz"],
+    id: "accountant-segment",
+    title: "Mali Müşavir Segmenti İş Modeli",
+    description:
+      "Mali Müşavir segmentine yönelik stratejik bir iş modeli tasarladım ve fizibilite süreçlerini yürüttüm.",
+    tags: ["Strateji", "Fizibilite"],
   },
   {
-    id: "customer-relations",
-    title: "Müşteri İlişkileri Yönetimi",
-    description: "Müşterilerle sürdürülebilir ve güvene dayalı ilişkiler kurup bu ilişkileri yönetiyorum.",
-    tags: ["Müşteri", "İlişki Yönetimi"],
+    id: "institutional-network",
+    title: "Kurumsal İş Birliği Ağları",
+    description: "Ticaret ve meslek odaları nezdinde üst düzey temaslar kurarak kurumsal iş birliği ağları inşa ettim.",
+    tags: ["İş Birliği", "İş Geliştirme"],
   },
   {
-    id: "field-reporting",
-    title: "Saha Çıktılarını Raporlama",
-    description: "Saha çalışmalarının çıktılarını özetleyip raporlayarak karar süreçlerine katkı sağlıyorum.",
-    tags: ["Raporlama"],
+    id: "field-feedback",
+    title: "Saha Geri Bildirimiyle Ürün İyileştirme",
+    description: "Saha geri bildirimlerini analiz ederek ürün geliştirme süreçlerine iyileştirme önerileri sundum.",
+    tags: ["Analiz", "Raporlama"],
   },
   {
     id: "customer-portfolio",
     title: "Müşteri Portföyü Oluşturma",
-    description: "Yeni müşteriler kazanarak güçlü ve sürdürülebilir bir müşteri portföyü oluşturuyorum.",
-    tags: ["Satış", "İş Geliştirme"],
+    description:
+      "Sahayı analiz ederek müşteri ihtiyaçlarını belirledim, ilişkileri yönettim ve müşteri portföyü oluşturdum.",
+    tags: ["Müşteri", "Saha"],
   },
 ];
