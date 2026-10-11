@@ -135,7 +135,7 @@ export function ContactForm({ accessKey }: ContactFormProps) {
           ) : null}
           {state === "error" ? (
             <p className="text-brand-ink text-sm font-medium">
-              Mesaj gönderilemedi. Lütfen daha sonra tekrar deneyin ya da yukarıdaki telefon veya e-posta ile ulaşın.
+              Mesaj gönderilemedi. Lütfen daha sonra tekrar deneyin ya da yukarıdaki e-posta adresiyle ulaşın.
             </p>
           ) : null}
         </div>

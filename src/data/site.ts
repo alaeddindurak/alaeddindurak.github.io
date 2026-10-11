@@ -26,8 +26,7 @@ export const siteConfig: SiteConfig = {
   ],
 
   contact: {
-    phone: "0553 285 35 12",
-    phoneHref: "+905532853512",
+    // No phone number on purpose (kept private). To show one later, add `phone` and `phoneHref`.
     email: "alaeddin.duraks@gmail.com",
     // Public Web3Forms access key (safe to commit). Set it to "" to hide the contact form.
     formAccessKey: "60a85da3-2ce7-4dae-8195-d01a350d279f",

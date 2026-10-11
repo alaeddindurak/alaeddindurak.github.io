@@ -9,13 +9,13 @@ Personal portfolio site built with Next.js (App Router), React, TypeScript and T
 | `/` | Hero and about me |
 | `/projects` | Project cards |
 | `/social` | Instagram and LinkedIn |
-| `/contact` | Phone and e-mail |
+| `/contact` | E-mail and message form (phone is optional and currently not shown) |
 
 ## Edit your content
 
 You normally only edit these files; components just render them:
 
-- `src/data/site.ts`: name, headline, biography, phone, e-mail, social links
+- `src/data/site.ts`: name, headline, biography, e-mail (optional phone), social links
 - `src/data/projects.ts`: project list
 - `src/data/navigation.ts`: menu items
 

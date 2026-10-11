@@ -20,10 +20,10 @@ export interface SocialLink {
 
 /** Contact details shown on the contact page. */
 export interface ContactInfo {
-  /** Phone number as it should be displayed. */
-  phone: string;
-  /** Phone number in international form for the `tel:` link, e.g. "+905551234567". */
-  phoneHref: string;
+  /** Optional. Phone number as it should be displayed; leave out to keep it private. */
+  phone?: string;
+  /** Optional. Phone number in international form for the `tel:` link, e.g. "+905551234567". */
+  phoneHref?: string;
   email: string;
   /**
    * Public access key of the form service (Web3Forms). It only allows sending messages

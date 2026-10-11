@@ -7,7 +7,7 @@ import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = { title: "İletişim" };
 
-/** Contact page: phone and e-mail cards, plus the message form once an access key is configured. */
+/** Contact page: e-mail card, plus the message form once an access key is configured. */
 export default function ContactPage() {
   const { formAccessKey } = siteConfig.contact;
 

@@ -2,13 +2,17 @@ import { Mail, Phone } from "lucide-react";
 import { Card } from "@/components/ui/Card";
 import { siteConfig } from "@/data/site";
 
-/** Phone and e-mail cards; each one opens the matching app via tel: / mailto:. */
+/**
+ * E-mail card (and a phone card when a phone number is set in `siteConfig.contact`).
+ * Each card opens the matching app via mailto: / tel:.
+ */
 export function ContactCards() {
   const { phone, phoneHref, email } = siteConfig.contact;
 
   const items = [
-    { label: "Telefon", value: phone, href: `tel:${phoneHref}`, Icon: Phone },
     { label: "E-posta", value: email, href: `mailto:${email}`, Icon: Mail },
+    // The phone number is optional and intentionally not published at the moment.
+    ...(phone && phoneHref ? [{ label: "Telefon", value: phone, href: `tel:${phoneHref}`, Icon: Phone }] : []),
   ];
 
   return (
