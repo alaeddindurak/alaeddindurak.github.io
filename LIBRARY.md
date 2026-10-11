@@ -81,6 +81,12 @@ Not npm packages, but third-party code that runs in our pipeline. All are offici
 | `actions/upload-pages-artifact` | v3 | Packages the `out/` folder | 2026-10-11 |
 | `actions/deploy-pages` | v4 | Publishes the package to GitHub Pages | 2026-10-11 |
 
+## External services (not npm packages)
+
+| Service | Purpose | Approved | Notes |
+|---|---|---|---|
+| Web3Forms (`api.web3forms.com`) | Receives contact-form messages from visitors' browsers and e-mails them to the owner | Owner, 2026-10-12 | No code library: the form uses the browser's `fetch`. The access key is public by design (it can only send messages to the owner's inbox); risks and mitigations were discussed with the owner: honeypot field (`botcheck`) is built in, key can be rotated if spam starts. Visitor data (name, e-mail, message) passes through this third party, so the form shows a short privacy note. The form stays hidden until `formAccessKey` is set in `src/data/site.ts`. |
+
 ## Security audit log
 
 | Date | Command | Result | Decision |

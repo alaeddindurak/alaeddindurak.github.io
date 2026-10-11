@@ -25,6 +25,11 @@ export interface ContactInfo {
   /** Phone number in international form for the `tel:` link, e.g. "+905551234567". */
   phoneHref: string;
   email: string;
+  /**
+   * Public access key of the form service (Web3Forms). It only allows sending messages
+   * to the owner's inbox, so it is safe to keep in the code. Leave empty to hide the form.
+   */
+  formAccessKey: string;
 }
 
 /** Lifecycle state of a project card. */
