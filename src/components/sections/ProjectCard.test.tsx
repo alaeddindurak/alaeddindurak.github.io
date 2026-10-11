@@ -24,4 +24,9 @@ describe("ProjectCard", () => {
     render(<ProjectCard project={project} />);
     expect(screen.getByText("Devam Ediyor")).toBeInTheDocument();
   });
+
+  it("shows no status badge when the project has no status", () => {
+    render(<ProjectCard project={{ ...project, status: undefined }} />);
+    expect(screen.queryByText("Devam Ediyor")).not.toBeInTheDocument();
+  });
 });

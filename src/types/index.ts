@@ -36,7 +36,8 @@ export interface Project {
   description: string;
   /** Short category labels shown as badges. */
   tags: string[];
-  status: ProjectStatus;
+  /** Optional: cards without a status simply show no badge. */
+  status?: ProjectStatus;
 }
 
 /** Global site configuration. */
@@ -46,6 +47,8 @@ export interface SiteConfig {
   headline: string;
   /** Page <title> default and meta description. */
   description: string;
+  /** Path of the profile photo inside `public/`, e.g. "/profile.png". */
+  photo: string;
   /** Short biography shown in the About section. */
   bio: string[];
   contact: ContactInfo;

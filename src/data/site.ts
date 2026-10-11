@@ -8,15 +8,18 @@ import type { SiteConfig } from "@/types";
 export const siteConfig: SiteConfig = {
   name: "Alaeddin Durak",
 
-  // TODO: replace with your real job title / one-line introduction.
-  headline: "Kişisel Portfolyo",
+  // Job title shown under the name in the hero section.
+  headline: "E-Dönüşüm Satış Uzmanı",
 
   description: "Alaeddin Durak'ın kişisel portfolyo sitesi: projeler, sosyal medya ve iletişim.",
 
-  // TODO: replace with your own biography. Each array item renders as one paragraph.
+  // Profile photo (file lives in /public). Portrait 3:4 photos fit the frame best.
+  photo: "/profile.png",
+
+  // Biography shown in the "Hakkımda" card. Each array item renders as one paragraph.
   bio: [
-    "Merhaba, ben Alaeddin. Bu alana kendinizi tanıtan kısa ve öz bir özgeçmiş yazısı ekleyebilirsiniz.",
-    "Deneyimlerinizi, ilgi alanlarınızı ve hedeflerinizi birkaç cümleyle anlatın.",
+    "Saha satış deneyimimle, müşteri ihtiyacına göre ürünü etkili şekilde konumlandırarak satışa dönüştürüyorum.",
+    "Satış süreçlerinde aktif rol alarak müşteri kazanımı ve iş geliştirme alanlarında yetkinliğimi geliştirmeye odaklanıyorum.",
   ],
 
   contact: {

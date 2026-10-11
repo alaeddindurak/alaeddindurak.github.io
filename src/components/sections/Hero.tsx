@@ -1,18 +1,9 @@
-import { Container } from "@/components/ui/Container";
+import Image from "next/image";
 import { Button } from "@/components/ui/Button";
+import { Container } from "@/components/ui/Container";
 import { siteConfig } from "@/data/site";
 
-/** Returns the initials of a full name, used inside the avatar placeholder. */
-function getInitials(name: string): string {
-  return name
-    .split(" ")
-    .map((part) => part[0])
-    .join("")
-    .slice(0, 2)
-    .toUpperCase();
-}
-
-/** Home page intro: name, headline, call-to-action buttons and an avatar placeholder. */
+/** Home page intro: name, headline, call-to-action buttons and the profile photo. */
 export function Hero() {
   return (
     <section className="py-16 sm:py-24">
@@ -24,21 +15,27 @@ export function Hero() {
           </h1>
           <p className="text-muted mt-4 text-lg sm:text-xl">{siteConfig.headline}</p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button href="/projects">Projelerimi Gör</Button>
+            <Button href="/projects">Çalışmalarımı Gör</Button>
             <Button href="/contact" variant="outline">
               İletişime Geç
             </Button>
           </div>
         </div>
 
-        {/* Avatar placeholder: replace with a real <Image> when a photo is available. */}
         <div className="order-1 flex justify-center md:order-2">
-          <div
-            role="img"
-            aria-label={`${siteConfig.name} profil fotoğrafı alanı`}
-            className="from-brand to-brand-dark flex h-48 w-48 items-center justify-center rounded-3xl bg-linear-to-br text-5xl font-bold text-white shadow-lg sm:h-64 sm:w-64"
-          >
-            {getInitials(siteConfig.name)}
+          {/*
+            Portrait frame with a fixed 3:4 aspect ratio, so any photo is cropped to the same shape.
+            "object-top" keeps the face in view when the photo is cropped.
+          */}
+          <div className="relative aspect-3/4 w-44 overflow-hidden rounded-3xl shadow-lg ring-4 ring-white sm:w-52">
+            <Image
+              src={siteConfig.photo}
+              alt={`${siteConfig.name} profil fotoğrafı`}
+              fill
+              priority
+              sizes="(min-width: 640px) 208px, 176px"
+              className="object-cover object-top"
+            />
           </div>
         </div>
       </Container>

@@ -19,9 +19,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
     <Card className="flex h-full flex-col transition-shadow hover:shadow-md">
       <div className="flex items-start justify-between gap-3">
         <h3 className="text-navy text-lg font-semibold">{project.title}</h3>
-        <Badge tone="brand" className="shrink-0">
-          {statusLabels[project.status]}
-        </Badge>
+        {project.status ? (
+          <Badge tone="brand" className="shrink-0">
+            {statusLabels[project.status]}
+          </Badge>
+        ) : null}
       </div>
       <p className="text-muted mt-3 flex-1 text-sm leading-relaxed">{project.description}</p>
       <ul className="mt-5 flex flex-wrap gap-2" aria-label="Kategoriler">

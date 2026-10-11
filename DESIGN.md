@@ -6,11 +6,11 @@ Current design tokens and rules. The tokens live in one place, `src/app/globals.
 
 | Token | Value | Tailwind class examples | Use |
 |---|---|---|---|
-| `brand` | `#FF5B00` | `bg-brand`, `text-brand` | Primary color: buttons, accents, active states |
-| `brand-dark` | `#E04F00` | `hover:bg-brand-dark` | Hover state; also text on `brand-soft` (contrast) |
-| `brand-soft` | `#FFF1E8` | `bg-brand-soft` | Light tint behind icons, badges, active nav item |
+| `brand` | `#BC0F29` | `bg-brand`, `text-brand` | Primary color (crimson red sampled from the logo): buttons, accents, active states |
+| `brand-dark` | `#9A0C21` | `hover:bg-brand-dark` | Hover state; also text on `brand-soft` (contrast) |
+| `brand-soft` | `#FDECEF` | `bg-brand-soft` | Light tint behind icons, badges, active nav item |
 | `ink` | `#1A1A1A` | `text-ink` | Body text |
-| `navy` | `#0F172A` | `text-navy`, `bg-navy` | Headings, footer background |
+| `navy` | `#0E1D67` | `text-navy`, `bg-navy` | Brand navy: headings, footer background |
 | `surface` | `#F8FAFC` | `bg-surface` | Page background |
 | `card` | `#FFFFFF` | `bg-card` | Card background |
 | `line` | `#E2E8F0` | `border-line` | Borders and dividers |

@@ -1,29 +1,39 @@
 import type { Project } from "@/types";
 
 /**
- * Projects shown on the Projects page.
- * TODO: these are placeholders. Replace them with your real or planned projects.
+ * Work areas shown on the "Çalışmalarım" page (route: /projects).
+ * Compiled from the experience items in the owner's CV.
+ * Add a `status` ("planned" | "in-progress" | "completed") to show a status badge on a card.
  */
 export const projects: Project[] = [
   {
-    id: "project-1",
-    title: "Örnek Proje 1",
-    description: "Bu kart örnek bir projeyi anlatır. Kendi projenizin kısa açıklamasını buraya yazın.",
-    tags: ["Web", "Kurumsal"],
-    status: "planned",
+    id: "field-analysis",
+    title: "Saha Analizi ve Proje Geliştirme",
+    description: "Sahayı analiz ederek fırsatları belirliyor, bu doğrultuda satışa yönelik projeler geliştiriyorum.",
+    tags: ["Saha", "Analiz"],
   },
   {
-    id: "project-2",
-    title: "Örnek Proje 2",
-    description: "Hayata geçirmek istediğiniz bir fikri ya da devam eden bir çalışmayı burada paylaşın.",
-    tags: ["Mobil"],
-    status: "in-progress",
+    id: "customer-needs",
+    title: "Müşteri İhtiyaç Analizi",
+    description: "Müşterilerin istek ve ihtiyaçlarını analiz ederek onlara en uygun çözümü sunuyorum.",
+    tags: ["Müşteri", "Analiz"],
   },
   {
-    id: "project-3",
-    title: "Örnek Proje 3",
-    description: "Tamamladığınız projeleri de bu listeye ekleyebilirsiniz.",
-    tags: ["Otomasyon"],
-    status: "completed",
+    id: "customer-relations",
+    title: "Müşteri İlişkileri Yönetimi",
+    description: "Müşterilerle sürdürülebilir ve güvene dayalı ilişkiler kurup bu ilişkileri yönetiyorum.",
+    tags: ["Müşteri", "İlişki Yönetimi"],
+  },
+  {
+    id: "field-reporting",
+    title: "Saha Çıktılarını Raporlama",
+    description: "Saha çalışmalarının çıktılarını özetleyip raporlayarak karar süreçlerine katkı sağlıyorum.",
+    tags: ["Raporlama"],
+  },
+  {
+    id: "customer-portfolio",
+    title: "Müşteri Portföyü Oluşturma",
+    description: "Yeni müşteriler kazanarak güçlü ve sürdürülebilir bir müşteri portföyü oluşturuyorum.",
+    tags: ["Satış", "İş Geliştirme"],
   },
 ];

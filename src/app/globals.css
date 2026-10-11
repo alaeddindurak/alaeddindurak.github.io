@@ -7,13 +7,14 @@
  */
 @theme {
   /* Brand */
-  --color-brand: #ff5b00;
-  --color-brand-dark: #e04f00;
-  --color-brand-soft: #fff1e8;
+  /* Crimson red from the logo; navy and white complete the brand palette. */
+  --color-brand: #bc0f29;
+  --color-brand-dark: #9a0c21;
+  --color-brand-soft: #fdecef;
 
   /* Neutrals */
   --color-ink: #1a1a1a;
-  --color-navy: #0f172a;
+  --color-navy: #0e1d67;
   --color-surface: #f8fafc;
   --color-card: #ffffff;
   --color-line: #e2e8f0;
