@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens.
+ * Every brand color, font and radius lives here, so a new design system
+ * only needs to replace the values in this single block.
+ */
+@theme {
+  /* Brand */
+  --color-brand: #ff5b00;
+  --color-brand-dark: #e04f00;
+  --color-brand-soft: #fff1e8;
+
+  /* Neutrals */
+  --color-ink: #1a1a1a;
+  --color-navy: #0f172a;
+  --color-surface: #f8fafc;
+  --color-card: #ffffff;
+  --color-line: #e2e8f0;
+  --color-muted: #475569;
+
+  /* Fonts (CSS variables are provided by next/font in layout.tsx) */
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+
+  /* Shape */
+  --radius-card: 1rem;
+}
+
+@layer base {
+  html {
+    /* Smooth in-page scrolling; respects the user's reduced-motion setting below. */
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+
+  /* Visible keyboard focus for every interactive element. */
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
